@@ -1,0 +1,54 @@
+Generador ASCII de Seis Ranuras
+===============================
+
+Esta herramienta genera un código reproducible de 6 dígitos a partir de una frase, una fecha y dos ajustes adicionales.
+Es útil para crear códigos numéricos personales y consistentes basados en palabras y fechas fáciles de recordar.
+
+Repositorio Original:
+https://github.com/CrisDxyz/Six-Slot-ASCII-Generator/tree/main
+
+Ejemplo de Demostración
+-----------------------
+
+Frase:   Cat
+Fecha:   01/08/2024
+Offset:  5
+Invertir: Activado
+
+Entrada con Sal: Cat01082024
+
+Hash a Ranuras:
+Ranura 1: 3 (C) + 1 (8) = 4
+Ranura 2: 6 (a) + 5 (2) = 11
+Ranura 3: 8 (t) + 2 (0) = 10
+Ranura 4: 2 (0) + 5 (2) = 7
+Ranura 5: 3 (1) + 7 (4) = 10
+Ranura 6: 2 (0) = 2
+
+Código Base (último dígito de cada total de ranura):
+410702
+
+Finalización:
++ Offset (+5): 965257
++ Invertir:    752569
+
+Resultado: 752569
+
+Resumen del Algoritmo
+---------------------
+1. Entrada con Sal:
+   Se combina una frase secreta con una fecha para crear una cadena base única.
+
+2. Hash a Ranuras:
+   Cada carácter se convierte a su código ASCII, se suman sus dígitos y el último dígito se añade a una de seis ranuras en un ciclo circular.
+
+3. Crear Código Base:
+   Se toma el último dígito del total de cada ranura y se concatenan para formar un código de 6 dígitos.
+
+4. Finalización:
+   Se añade un desplazamiento personal (0–9) a cada dígito, envolviendo de 9→0.
+   Opcionalmente se invierte el resultado.
+
+Licencia
+--------
+Licencia MIT — Ver LICENSE.txt para más detalles.
