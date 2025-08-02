@@ -1,3 +1,6 @@
+; Credits: CrisDxyz
+; Original repo: https://github.com/CrisDxyz/Six-Slot-ASCII-Generator/tree/main
+
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
@@ -90,4 +93,5 @@ StrReverse(str) {
     Loop Parse str
         reversed := A_LoopField . reversed
     return reversed
+
 }
